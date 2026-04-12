@@ -65,7 +65,7 @@ body {
 /* --- Hero Section --- */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1500&q=80');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background.png');
     background-size: cover; background-position: center;
     display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white);
 }
@@ -289,4 +289,25 @@ body {
 .about-info p {
     font-size: 1.1rem; /* Increase this number (e.g., 1.2rem) to make it bigger */
     line-height: 1.8;   /* This adds space between lines for better readability */
+}
+
+/* --- Centering the Team Cards --- */
+.team-card.no-img {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--primary);
+    transition: var(--transition);
+    
+    /* Ensure the card is a flex container and centers its contents */
+    display: flex;
+    justify-content: center; /* Horizontally centers the contents */
+    align-items: center;     /* Vertically centers the contents */
+    text-align: center;       /* Centers all text lines in the card */
+    min-height: 180px;
+}
+
+/* Ensure the info block is also centered within the card */
+.member-info {
+    width: 100%; /* Ensures it fills the container's width */
 }
