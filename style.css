@@ -34,8 +34,27 @@ body {
 
 .navbar .container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
-.logo { font-family: 'Playfair Display', serif; font-size: 2rem; text-decoration: none; color: var(--secondary); font-weight: 700; }
-.logo span { color: var(--primary); }
+/* --- New Image Logo Styling --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* In case the link adds an underline */
+}
+
+.logo-img {
+    height: 60px; /* This is crucial. It keeps the logo from pushing your navbar's height beyond 80px */
+    width: auto; /* Maintains aspect ratio */
+    margin-right: 15px; /* Spacing between logo and nav links */
+    transition: var(--transition); /* Smooth transition on hover/scroll if added later */
+}
+
+/* Make sure the main navbar can handle the new logo container well */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
 .nav-links { display: flex; list-style: none; align-items: center; }
 .nav-links li a { text-decoration: none; color: var(--text-dark); margin: 0 15px; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
@@ -55,6 +74,22 @@ body {
 .hero h1 span { color: var(--primary); }
 .hero p { font-size: 1.2rem; max-width: 800px; margin-bottom: 30px; }
 
+.hero-content {
+    text-align: center;      /* Centers the text lines */
+    display: flex;
+    flex-direction: column;  /* Stacks elements vertically */
+    align-items: center;     /* Centers the items horizontally in the flex container */
+    justify-content: center; /* Centers the items vertically */
+    max-width: 900px;        /* Prevents the lines from getting too wide */
+    margin: 0 auto;          /* Centers the whole container itself */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    width: 100%;             /* Ensures the paragraph takes the full width of the centered container */
+}
+
 .btn-primary, .btn-secondary {
     padding: 15px 35px; border-radius: 5px; text-decoration: none; font-weight: 700; display: inline-block; margin: 10px; transition: var(--transition);
 }
@@ -69,18 +104,189 @@ body {
 .underline { width: 60px; height: 4px; background: var(--primary); margin: 10px auto; }
 
 /* --- Team Section --- */
-.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-.team-card { background: var(--white); text-align: center; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-.member-img { height: 250px; background: #ddd; } /* Placeholder for team photos */
-.member-info { padding: 20px; }
-.member-info h4 { margin-bottom: 5px; color: var(--secondary); }
+.team-card.no-img {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--primary); /* Adds a nice color accent at the top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+    transition: var(--transition);
+}
 
-/* --- Donation Cards --- */
-.donation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.donation-card { background: var(--white); border: 1px solid #eee; padding: 40px; text-align: center; border-radius: 10px; position: relative; }
-.donation-card.featured { border: 2px solid var(--primary); transform: scale(1.05); }
-.popular { background: var(--primary); color: white; position: absolute; top: 0; left: 50%; transform: translateX(-50%); padding: 5px 15px; font-size: 0.7rem; font-weight: 700; border-radius: 0 0 10px 10px; }
+.team-card.no-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
 
-/* --- Contact Form --- */
-.contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; }
+.member-info h4 {
+    font-size: 1.4rem;
+    color: var(--secondary);
+    margin-bottom: 8px;
+}
+
+.member-info .role {
+    color: var(--text-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+/* --- UPI Donate Section --- */
+.upi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.qr-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 350px;
+    border: 2px solid #eee;
+}
+
+.qr-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.upi-details {
+    border-top: 1px dashed #ccc;
+    padding-top: 15px;
+}
+
+.upi-id {
+    font-size: 1.1rem;
+    color: var(--secondary);
+    word-break: break-all;
+}
+
+.upi-note {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Simple Contact Section --- */
+.contact-simple-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+    font-size: 1.2rem;
+}
+
+.contact-card p a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.contact-card p a:hover {
+    color: var(--primary);
+}
+
+/* --- Our Missions Section --- */
+.mission-container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.mission-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    border-left: 8px solid var(--secondary); /* A solid teal border for emphasis */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.mission-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.mission-tag {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 15px;
+    background: #e8f5e9; /* Light green background */
+    color: #2e7d32; /* Dark green text */
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+    .mission-container-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.about-info p {
+    font-size: 1.1rem; /* Increase this number (e.g., 1.2rem) to make it bigger */
+    line-height: 1.8;   /* This adds space between lines for better readability */
+}
