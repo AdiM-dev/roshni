@@ -12,12 +12,15 @@
 
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="#" class="logo">ROSHNI<span>.</span></a>
+            <a href="#" class="logo-container">
+                <img src="roshni-logo.png" alt="Roshni NGO Logo" class="logo-img">
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#team">Our Team</a></li>
                 <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#missions">Our Missions</a></li>
                 <li class="donate-li"><a href="#donate" class="btn-nav">Donate</a></li>
             </ul>
             <div class="hamburger">
@@ -46,32 +49,36 @@
             <div class="about-grid">
                 <div class="about-info">
                     <h3>Our Vision</h3>
-                    <p>Roshni is driven by the belief that everyonedeserves care, opportunity, and hope. We work for the wellbeing of underprivileged communities by focusing on children's education, supporting those in need, and giving back to society in meaningful ways. Roshni means light, and our mission is to spread that light through compassion, action, and community support</p>
-                    <div class="mission-list">
-                        <div class="mission-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>Education:</strong> Running 10+ learning centers for slum children.</p>
-                        </div>
-                        <div class="mission-item">
-                            <i class="fas fa-check-circle"></i>
-                            <p><strong>Sanitation:</strong> Project Kusum for menstrual hygiene awareness.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-box">
-                        <span class="number">1500+</span>
-                        <p>Active Students</p>
-                    </div>
-                    <div class="stat-box">
-                        <span class="number">50+</span>
-                        <p>Volunteers</p>
-                    </div>
+                    <p>Roshni is driven by the belief that everyone deserves care, opportunity, and hope. We work for the wellbeing of underprivileged communities by focusing on children's education, supporting those in need, and giving back to society in meaningful ways. Roshni means light, and our mission is to spread that light through compassion, action, and community support</p>
                 </div>
             </div>
         </div>
     </section>
+    <section id="missions" class="section missions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Missions</h2>
+                <div class="underline"></div>
+                <p>A glimpse into our recent successful campaigns and community outreach.</p>
+            </div>
+            
+            <div class="mission-container-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">😷</div>
+                    <h3>Mask Donation Drive</h3>
+                    <p>During the peak of the health crisis, Roshni Sanstha successfully distributed <strong>1,000+ high-quality masks</strong> to frontline workers and underprivileged families in Delhi to ensure community safety.</p>
+                    <span class="mission-tag">Completed</span>
+                </div>
 
+                <div class="mission-card">
+                    <div class="mission-icon">🩸</div>
+                    <h3>Blood Donation Campaign</h3>
+                    <p>In collaboration with local hospitals, we organized a mega <strong>Blood Donation Drive</strong>. The event saw massive participation, helping replenish local blood banks and saving numerous lives.</p>
+                    <span class="mission-tag">Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="team" class="section team-section bg-light">
         <div class="container">
             <div class="section-header">
@@ -79,25 +86,22 @@
                 <div class="underline"></div>
             </div>
             <div class="team-grid">
-                <div class="team-card">
-                    <div class="member-img"></div>
+                <div class="team-card no-img">
                     <div class="member-info">
-                        <h4>Faisal Hussain</h4>
-                        <p>Founder & President</p>
+                        <h4>Sehej & Rudra</h4>
+                        <p class="role">Founders</p>
                     </div>
                 </div>
-                <div class="team-card">
-                    <div class="member-img"></div>
+                <div class="team-card no-img">
                     <div class="member-info">
-                        <h4>Project Coordinators</h4>
-                        <p>Management Team</p>
+                        <h4>Brahmansh Thapa</h4>
+                        <p class="role">Head of Design & Creativity</p>
                     </div>
                 </div>
-                <div class="team-card">
-                    <div class="member-img"></div>
+                <div class="team-card no-img">
                     <div class="member-info">
-                        <h4>Field Volunteers</h4>
-                        <p>Community Outreach</p>
+                        <h4>Saisha Sathpathy</h4>
+                        <p class="role">Head of Social Media & Communications</p>
                     </div>
                 </div>
             </div>
@@ -107,25 +111,18 @@
     <section id="donate" class="section donate-section">
         <div class="container">
             <div class="section-header">
-                <h2>Make a Difference</h2>
-                <p>Your contribution directly supports our educational and health initiatives.</p>
+                <h2>Support Our Mission</h2>
+                <div class="underline"></div>
+                <p>Scan the QR code below to donate directly via any UPI app.</p>
             </div>
-            <div class="donation-grid">
-                <div class="donation-card">
-                    <h3>₹500</h3>
-                    <p>Sponsor a child's books for a month.</p>
-                    <button class="btn-donate-card">Select</button>
-                </div>
-                <div class="donation-card featured">
-                    <div class="popular">Most Impact</div>
-                    <h3>₹2,000</h3>
-                    <p>Support a vocational training batch for women.</p>
-                    <button class="btn-donate-card">Select</button>
-                </div>
-                <div class="donation-card">
-                    <h3>Custom</h3>
-                    <p>Enter any amount you wish to contribute.</p>
-                    <button class="btn-donate-card">Enter</button>
+            
+            <div class="upi-container">
+                <div class="qr-card">
+                    <img src="scanner.png" alt="UPI QR Code for Roshni NGO" class="qr-image">
+                    <div class="upi-details">
+                        <p class="upi-id"><strong>UPI ID:</strong> roshni@upi</p> 
+                        <span class="upi-note">Scan to Pay</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,42 +133,30 @@
             <div class="section-header">
                 <h2>Contact Us</h2>
                 <div class="underline"></div>
+                <p>Feel free to reach out to us for collaborations, volunteering, or inquiries.</p>
             </div>
-            <div class="contact-wrapper">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <textarea rows="5" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn-primary">Send Message</button>
-                    </form>
+            
+            <div class="contact-simple-wrapper">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+918130987123">+91 8130987123</a></p>
                 </div>
-                <div class="contact-details">
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>228, 60 Feet Road, Pul Pehlad Pur, New Delhi</p>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+91 8130987123</p>
-                    </div>
-                    <div class="detail-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>info@roshnisanstha.com</p>
-                    </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@roshnisanstha.com">info@roshnisanstha.com</a></p>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/_roshniofficial__/" target="_blank">@_roshniofficial__</a></p>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 Roshni Sanstha | Registered NGO under 80G Tax Exemption.</p>
-            <div class="socials">
-                <a href="https://www.instagram.com/_roshniofficial__/">Instagram</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
