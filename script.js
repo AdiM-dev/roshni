@@ -53,3 +53,22 @@ donateButtons.forEach(btn => {
         alert("Redirecting to our secure payment partner...");
     });
 });
+
+// --- Modal Gallery Logic ---
+
+// Open the Modal
+function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+}
+
+// Close the Modal
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+}
+
+// Close the Modal if the user clicks anywhere outside of the white box
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
