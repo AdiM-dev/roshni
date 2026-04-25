@@ -27,7 +27,7 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#missions">Our Missions</a></li>
                 <li><a href="#team">Our Team</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#join">Join</a></li> <li><a href="#contact">Contact Us</a></li>
                 <li class="donate-li"><a href="#donate" class="btn-nav">Donate</a></li>
             </ul>
         </div>
@@ -72,6 +72,8 @@
                     <h3>Mask Donation Drive</h3>
                     <p>During the peak of the health crisis, Roshni Sanstha successfully distributed <strong>1,000+ high-quality masks</strong> to frontline workers and underprivileged families in Delhi to ensure community safety.</p>
                     <span class="mission-tag">Completed</span>
+                    <br>
+                    <button class="btn-primary gallery-btn" onclick="openModal('mask-gallery')">View Photos</button>
                 </div>
 
                 <div class="mission-card">
@@ -117,7 +119,19 @@
             </div>
         </div>
     </section>
-
+    <section id="join" class="section join-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join Our Movement</h2>
+                <div class="underline"></div>
+                <p>Become a volunteer and help us spread the light of education and empowerment.</p>
+            </div>
+            
+            <div class="join-image-container">
+                <img src="join.png" alt="Join Roshni NGO" class="join-image">
+            </div>
+        </div>
+    </section>
     <section id="donate" class="section donate-section">
         <div class="container">
             <div class="section-header">
@@ -172,7 +186,23 @@
             </div>
         </div>
     </section>
-
+    <div id="mask-gallery" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('mask-gallery')">&times;</span>
+            <h2>Mask Donation Drive</h2>
+            <p>A glimpse of our volunteers in action.</p>
+            <div class="gallery-grid">
+                <img src="mask1.png" alt="Mask Donation 1">
+                <img src="mask2.jpg" alt="Mask Donation 2">
+                <img src="mask3.jpg" alt="Mask Donation 3">
+                <img src="mask4.jpg" alt="Mask Donation 4">
+                <img src="mask5.jpg" alt="Mask Donation 5">
+                <img src="mask6.jpg" alt="Mask Donation 6">
+                <img src="mask7.jpg" alt="Mask Donation 7">
+                <img src="mask8.jpg" alt="Mask Donation 8">
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
